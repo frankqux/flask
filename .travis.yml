@@ -1,18 +1,19 @@
 language: python
-python: "3.7"
+python: 
+  - "3.7"
 
 # virtualenv:
 #   system_site_packages: true
-services:
-  - docker
+# services:
+#   - docker
 
 # Install dependencies.
 install:
   - pip install pipenv
   - pipenv install
 
-# Do fake test.
-script: pipenv check
+# Run tests.
+script: pytest
 
 # Deploy to DH.
 # deploy:
